@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mo.tv — Rick & Morty</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="./css/master.css">
+</head>
+<body class="font-sans text-gray-800">
+
+ <header class="bg-white/60 backdrop-blur sticky top-0 z-50">
+<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-300 to-teal-500 flex items-center justify-center shadow">
+<span class="text-white font-bold">mo</span>
+</div>
+<div>
+<h1 class="text-lg font-semibold">mo.tv</h1>
+<p class="text-sm text-gray-500">Rick & Morty — دليل الشخصيات</p>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-4 text-sm text-gray-600">
+<span class="px-3 py-1 rounded-full bg-teal-50 text-teal-600">الرئيسية</span>
+<a href="#grid" class="px-3 py-1 hover:bg-teal-50 rounded">الشخصيات</a>
+</div>
+</div>
+</header>
+
+
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="mb-6">
+<h2 class="text-2xl font-bold mb-2">اكتشف شخصيات Rick & Morty</h2>
+<p class="text-gray-600">اضغط على أي صورة.</p>
+</section>
+
+
+<section id="grid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></section>
+
+
+<div id="status" class="mt-6 text-center text-gray-600"></div>
+</main>
+
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 hidden items-center justify-center z-60">
+<div class="absolute inset-0 bg-black/40" data-close></div>
+<div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden transform transition-transform scale-95">
+<div class="flex gap-4 p-4">
+<img id="modal-img" src="" alt="character" class="w-40 h-40 object-cover rounded-lg" />
+<div class="flex-1">
+<h3 id="modal-name" class="text-2xl font-bold"></h3>
+<p id="modal-status" class="mt-1 text-sm text-gray-600"></p>
+<div class="mt-3 grid grid-cols-2 gap-2 text-sm text-gray-700">
+<div><span class="font-semibold">النوع:</span> <span id="modal-species"></span></div>
+<div><span class="font-semibold">الجنس:</span> <span id="modal-gender"></span></div>
+<div><span class="font-semibold">الأصل:</span> <span id="modal-origin"></span></div>
+<div><span class="font-semibold">المكان الحالي:</span> <span id="modal-location"></span></div>
+<div class="col-span-2"><span class="font-semibold">عدد الحلقات:</span> <span id="modal-episodes"></span></div>
+</div>
+</div>
+</div>
+<div class="p-4 text-right">
+<button data-close class="px-4 py-2 rounded-lg bg-teal-500 text-white font-semibold">اغلاق</button>
+</div>
+</div>
+</div>
+
+    
+
+    <script src="./js/main.js"></script>
+</body>
+</html>  

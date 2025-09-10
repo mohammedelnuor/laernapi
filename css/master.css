@@ -1,0 +1,16 @@
+/* style.css */
+:root {
+--bg: #f6fbfb;
+--card: #ffffff;
+--muted: #6b7280;
+--accent: #2dd4bf;
+}
+body {
+background: var(--bg);
+}
+.card-img {
+height: 220px;
+object-fit: cover;
+width: 100%;
+}
+
